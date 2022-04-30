@@ -1,5 +1,4 @@
 import '../styles/globals.css'
-import "tailwindcss/tailwind.css";
 
 import type { AppProps } from 'next/app'
 import React from "react";
@@ -17,18 +16,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="initial-scale=1.0, width=device-width"
         />
         </Head>
-        <Script
-          src="https://kit.fontawesome.com/a7ef51f3aa.js"
-          crossOrigin="anonymous"
-        ></Script>
       <Component {...pageProps} />
     </>
   )
 }
 
-MyApp.getInitialProps = async (appContext) => {
-  const appProps = await App.getInitialProps(appContext);
-  return { ...appProps };
-};
 
 export default MyApp
